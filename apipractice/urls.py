@@ -16,7 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from rest_framework_simplejwt.views import  (TokenObtainPairView,TokenRefreshView)
+from myapp.views import api
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/token/',TokenObtainPairView.as_view(),name="obtain_token"),
+    path('api/token/refresh/',TokenRefreshView.as_view(),name="refresh_token"),
+    path("ninja/",api.urls)
 ]

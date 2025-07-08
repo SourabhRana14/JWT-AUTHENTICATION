@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'ninja','rest_framework','rest_framework_simplejwt','myapp'
+    'rest_framework','rest_framework_simplejwt','myapp'
 ]
 
 REST_FRAMEWORK = {
